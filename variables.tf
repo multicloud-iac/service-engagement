@@ -26,11 +26,6 @@ variable "instance_name" {
   default     = "demo"
 }
 
-variable "image" {
-  description = "image to build instance from"
-  default     = "debian-cloud/debian-9"
-}
-
 variable "image_family" {
   description = "image family to build instance from"
   default     = "ubuntu-1804-lts"
