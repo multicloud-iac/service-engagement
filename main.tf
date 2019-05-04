@@ -3,7 +3,7 @@ terraform {
 }
 
 provider "google" {
-  # credentials = "${var.gcp_credentials}"  # project     = "${var.gcp_project}"  # region      = "${var.gcp_region}"
+  project = "${var.gcp_project}"
 }
 
 data "google_compute_image" "latest" {
