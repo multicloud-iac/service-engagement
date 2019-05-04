@@ -2,10 +2,10 @@ variable "gcp_project" {
   description = "GCP project name"
 }
 
-# variable "gcp_region" {
-#   description = "GCP region, e.g. us-east1"
-#   default     = "us-east1"
-# }
+variable "gcp_region" {
+  description = "GCP region, e.g. us-east1"
+  default     = "us-east1"
+}
 
 variable "gcp_zone" {
   description = "GCP zone, e.g. us-east1-a"
@@ -30,4 +30,12 @@ variable "image_family" {
 variable "image_project" {
   description = "image project to build instance from"
   default     = "ubuntu-os-cloud"
+}
+
+variable "ttl" {
+  description = "TTL tag to assign to instance"
+}
+
+variable "owner" {
+  description = "Ownert tag to assign to instance"
 }

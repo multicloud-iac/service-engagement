@@ -4,6 +4,7 @@ terraform {
 
 provider "google" {
   project = "${var.gcp_project}"
+  region  = "${var.gcp_region}"
 }
 
 data "google_compute_image" "latest" {
@@ -28,5 +29,10 @@ resource "google_compute_instance" "demo" {
     access_config {
       // Ephemeral IP
     }
+  }
+
+  labels {
+    Owner = "${var.owner}"
+    TTL   = "${var.ttl}"
   }
 }
