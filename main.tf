@@ -32,7 +32,7 @@ resource "google_compute_instance" "demo" {
   }
 
   labels {
-    Owner = "${var.owner}"
-    TTL   = "${var.ttl}"
+    owner = "${var.owner}"
+    ttl   = "${var.ttl}"
   }
 }
